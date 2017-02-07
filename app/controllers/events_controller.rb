@@ -5,6 +5,7 @@ class EventsController < ApplicationController
   end
 
   def show
+    @event = Events::DisplayService.show(params[:id])
   end
 
 end
