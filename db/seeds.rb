@@ -26,3 +26,5 @@ Event.create(
   price: 'A partir de R$ 65,00',
   more_info: 'https://www.eventick.com.br/frontinvale2017'
 )
+
+AdminUser.create!(email: 'luizhrqas@gmail.com', password: 'relogio123', password_confirmation: 'relogio123')
