@@ -10,3 +10,17 @@
 .is-danger-text {
   color: #ff3860;
 }
+
+.footer {
+  margin-top: 80px;
+  padding: 3rem 1.5rem 3rem;
+}
+
+.footer a {
+  color: #ff3860;
+}
+
+.footer .icon {
+  font-size: 50px;
+  margin-top: 10px;
+}
