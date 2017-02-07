@@ -1,3 +1,8 @@
 .container--main {
   margin-top: 40px;
 }
+
+.nav-item a.is-tab.is-active, a.nav-item.is-tab.is-active,a.nav-item:hover {
+  border-bottom: 3px solid #ff3860 !important;
+  color: #ff3860;
+}

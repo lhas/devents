@@ -1,17 +1,25 @@
-<div class="container container--main">
-  
-  <h1 class="title"><%= @event.title %></h1>
+<section class="hero is-danger is-bold">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        <%= @event.title %>
+      </h1>
+      <h2 class="subtitle">
+        <i class="material-icons">place</i> <%= @event.city %>, <%= @event.state %>
+      </h2>
+    </div>
+  </div>
+</section>
 
-  <hr>
+<div class="container container--main">
 
   <div class="content">
 
     <div class="columns">
       <div class="column">
 
-        <span class="tag is-large"><i class="material-icons">place</i> <%= @event.city %>, <%= @event.state %></span>
-        <span class="tag is-large"><i class="material-icons">place</i> <%= @event.address %></span>
-        <span class="tag is-large"><i class="material-icons">date_range</i> <%= I18n.l(@event.event_date, format: '%d/%m/%Y') %></span>
+        <span class="tag is-large is-danger"><i class="material-icons">place</i> <%= @event.address %></span>
+        <span class="tag is-large is-danger"><i class="material-icons">date_range</i> <%= I18n.l(@event.event_date, format: '%d/%m/%Y') %></span>
       
       </div>
     </div>
@@ -22,8 +30,14 @@
         <div class="notification">
           <h2 class="title">Descrição</h2>
           <p><%= @event.description %></p>
+        </div>
+
+        <div class="notification">
           <h2 class="title">Valores</h2>
           <p><%= @event.price %></p>
+        </div>
+
+        <div class="notification">
           <h2 class="title">Mais Informações</h2>
           <p><%= auto_link(@event.more_info) %></p>
         </div>
