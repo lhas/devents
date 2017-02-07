@@ -17,26 +17,17 @@
               </figure>
             </div>%>
             <div class="media-content">
-              <p class="title is-4">FrontInVale 2017</p>
-              <p class="subtitle is-6">São José dos Campos, SP</p>
+              <p class="title is-4"><%= event.title %></p>
+              <p class="subtitle is-6"><%= event.city %>, <%= event.state %></p>
             </div>
           </div>
 
           <div class="content">
-            <p>Terceira edição do maior evento de Front-End do Vale do Paraíba. Um dia inteiro com conteúdos incríveis para você se tornar um front-end monstro! ;)</p>
+            <p><%= event.description %></p>
+
+            <p><i class="material-icons">place</i> <%= event.address %></p>
+            <p><i class="material-icons">date_range</i> <%= I18n.l(event.event_date, format: '%d/%m/%Y') %></p>
             
-            <div class="level">
-              <div class="level-left">
-                <div class="level-item">
-                  <p><i class="material-icons">place</i> Faro Hotel</p>
-                </div>
-              </div>
-              <div class="level-right">
-                <div class="level-item">
-                  <p><i class="material-icons">date_range</i> 16/09/2017</p>
-                </div>
-              </div>
-            </div>
             <a class="button is-info">Ver Mais</a>
           </div> <!-- .content -->
         </div>
@@ -44,7 +35,7 @@
       
     </div>
     <% end %>
-    
+
   </div>
 
 </div>
