@@ -4,6 +4,8 @@
   <h2 class="subtitle">Veja quais são os próximos eventos de tecnologia no Brasil</h2>
 
   <div class="columns">
+
+    <% @events.each do |event| %>
     <div class="column is-one-third">
 
       <div class="card">
@@ -41,6 +43,8 @@
       </div> <!-- .card -->
       
     </div>
+    <% end %>
+    
   </div>
 
 </div>
