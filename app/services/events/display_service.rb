@@ -2,7 +2,7 @@ module Events
   class DisplayService
 
     def self.all
-      Event.all
+      Event.active.all
     end
 
     def self.show(id)
