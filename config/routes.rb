@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
 
   root to: 'events#index'
-  get '/eventos/sugerir', to: 'events#new', as: 'new_event'
+  get '/eventos/sugerir(/:sent)', to: 'events#new', as: 'new_event'
   post '/eventos/sugerir', to: 'events#create', as: 'create_event'
   get '/eventos/:id', to: 'events#show', as: 'event'
 

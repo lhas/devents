@@ -25,7 +25,7 @@
 
   <% if params[:sent] %>
     <div class="notification is-success">
-      Seu contato foi enviado com sucesso!
+      Seu evento foi enviado com sucesso!
     </div>
   <% end %>
 
@@ -49,6 +49,11 @@
     <label for="state" class="label">Estado</label>
     <p class="control">
       <input required type="text" name="event[state]" id="state" class="input">
+    </p>
+
+    <label for="address" class="label">Endereço</label>
+    <p class="control">
+      <input required type="text" name="event[address]" id="address" class="input">
     </p>
 
     <label for="event_date" class="label">Data</label>
