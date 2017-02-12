@@ -2,7 +2,7 @@ module Events
   class DisplayService
 
     def self.all
-      Event.active.all
+      Event.active.order(event_date: :asc).all
     end
 
     def self.show(id)
