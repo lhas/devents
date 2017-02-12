@@ -41,6 +41,18 @@
           <h2 class="title">Mais Informações</h2>
           <p><%= auto_link(@event.more_info) %></p>
         </div>
+
+        <% if @event.address %>
+        <div class="notification">
+          <h2 class="title">Localização</h2>
+          <iframe
+            width="100%"
+            height="450"
+            frameborder="0" style="border:0"
+            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDxzkQbHX7ywePwisa8-g0MlmM1Zfff76M&q=<%= @event.address %>" allowfullscreen>
+          </iframe>
+        </div>
+        <% end %>
       
       </div>
     </div>
