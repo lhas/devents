@@ -1,0 +1,77 @@
+<section class="hero is-danger is-bold">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        Sugerir Evento
+      </h1>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="subtitle">
+        Sabe de algum evento que não está presente no site? Envie ele aqui!
+        </h2>
+        <h3 class="subtitle">
+        Obs: Sujeito a aprovação.
+        </h3>
+      </div>
+    </div>
+  </section>
+
+  <% if params[:sent] %>
+    <div class="notification is-success">
+      Seu contato foi enviado com sucesso!
+    </div>
+  <% end %>
+
+  <%= form_tag(create_event_path, method: :post) do %>
+
+    <label for="title" class="label">Nome</label>
+    <p class="control">
+      <input required type="text" name="event[title]" id="title" class="input">
+    </p>
+
+    <label for="description" class="label">Descrição</label>
+    <p class="control">
+      <textarea id="description" name="event[description]" class="textarea"></textarea>
+    </p>
+
+    <label for="city" class="label">Cidade</label>
+    <p class="control">
+      <input required type="text" name="event[city]" id="city" class="input">
+    </p>
+
+    <label for="state" class="label">Estado</label>
+    <p class="control">
+      <input required type="text" name="event[state]" id="state" class="input">
+    </p>
+
+    <label for="event_date" class="label">Data</label>
+    <p class="control">
+      <input required type="date" name="event[event_date]" id="event_date" class="input">
+    </p>
+
+    <label for="price" class="label">Valores</label>
+    <p class="control">
+      <input required type="text" name="event[price]" id="price" class="input">
+    </p>
+
+    <label for="more_info" class="label">Mais informações</label>
+    <p class="control">
+      <textarea id="more_info" name="event[more_info]" class="textarea"></textarea>
+    </p>
+
+    <div class="control is-grouped">
+      <p class="control">
+        <button type="submit" class="button is-danger">Enviar</button>
+      </p>
+    </div>
+
+  <% end %>
+
+</div> <!-- .container -->
