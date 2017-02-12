@@ -5,6 +5,7 @@ class ContactsController < ApplicationController
 
   def create
     Contacts::EmailService.send(contact_params)
+    redirect_to contact_path(sent: 'enviado')
   end
 
   private

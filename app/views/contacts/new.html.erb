@@ -20,6 +20,12 @@
     </div>
   </section>
 
+  <% if params[:sent] %>
+    <div class="notification is-success">
+      Seu contato foi enviado com sucesso!
+    </div>
+  <% end %>
+
   <%= form_tag(create_contact_path, method: :post) do %>
 
     <label for="name" class="label">Nome</label>
@@ -34,7 +40,7 @@
 
     <label for="message" class="label">Mensagem</label>
     <p class="control">
-      <textarea name="message" id="message" name="contact[message]" class="textarea"></textarea>
+      <textarea id="message" name="contact[message]" class="textarea"></textarea>
     </p>
 
     <div class="control is-grouped">
